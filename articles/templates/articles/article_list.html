@@ -10,7 +10,7 @@
                 </h2>
                 <p> {{ article.snippet }} </p>
                 <p> {{ article.date }} </p>
-                <p class="author">add by {{ article.author.username}}</p>
+                <a href="{% url 'articles:user_articles' author=article.author %}"> <p class="author" >add by {{ article.author}}</p></a>
             </div>
             {% endfor %}
     </div>
